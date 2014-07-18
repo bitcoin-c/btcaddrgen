@@ -1,0 +1,255 @@
+# depslib dependency file v1.0
+1405589782 source:c:\myapps\codeblock\base\datatype.c
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1405234581 c:\myapps\codeblock\base\compatible.h
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+	<time.h>
+	<sys/time.h>
+	<assert.h>
+	<pthread.h>
+	<io.h>
+	<ws2tcpip.h>
+	<winsock2.h>
+	<mswsock.h>
+	<windows.h>
+	<commctrl.h>
+	<stdbool.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netinet/ip.h>
+	<netinet/ip6.h>
+	<iconv.h>
+
+1405623521 c:\myapps\codeblock\base\util.h
+	"compatible.h"
+	<openssl/evp.h>
+	<openssl/conf.h>
+	<openssl/err.h>
+	<time.h>
+	<openssl/bn.h>
+	<openssl/ecdsa.h>
+	<openssl/sha.h>
+	<openssl/ripemd.h>
+	<openssl/rand.h>
+	<openssl/obj_mac.h>
+
+1404820533 c:\myapps\codeblock\base\datatype.h
+	"compatible.h"
+
+1405365057 source:c:\myapps\codeblock\base\hwinobj.c
+	"hWinObj.h"
+	<winuser.h>
+
+1405185607 c:\myapps\codeblock\base\hwinobj.h
+	"compatible.h"
+	"util.h"
+	<commctrl.h>
+
+1404998406 source:c:\myapps\codeblock\base\satoshi_protocol.c
+	"compatible.h"
+	"satoshi_protocol.h"
+	"util.h"
+
+1404740920 c:\myapps\codeblock\base\satoshi_protocol.h
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1404630935 source:c:\myapps\codeblock\base\satoshi_script.c
+	"satoshi_script.h"
+
+1404575687 c:\myapps\codeblock\base\satoshi_script.h
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1404998406 source:c:\myapps\codeblock\base\socks5.c
+	"socks5.h"
+
+1404822867 c:\myapps\codeblock\base\socks5.h
+	"compatible.h"
+
+1405623521 source:c:\myapps\codeblock\base\util.c
+	"util.h"
+
+1405670741 source:c:\myapps\codeblock\btcutil\main.c
+	"base/compatible.h"
+	"base/util.h"
+
+1405589782 source:c:\myapps\codeblock\btcutil\base\datatype.c
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1405234581 c:\myapps\codeblock\btcutil\base\compatible.h
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+	<time.h>
+	<sys/time.h>
+	<assert.h>
+	<pthread.h>
+	<io.h>
+	<ws2tcpip.h>
+	<winsock2.h>
+	<mswsock.h>
+	<windows.h>
+	<commctrl.h>
+	<stdbool.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netinet/ip.h>
+	<netinet/ip6.h>
+	<iconv.h>
+
+1405623521 c:\myapps\codeblock\btcutil\base\util.h
+	"compatible.h"
+	<openssl/evp.h>
+	<openssl/conf.h>
+	<openssl/err.h>
+	<time.h>
+	<openssl/bn.h>
+	<openssl/ecdsa.h>
+	<openssl/sha.h>
+	<openssl/ripemd.h>
+	<openssl/rand.h>
+	<openssl/obj_mac.h>
+
+1404820533 c:\myapps\codeblock\btcutil\base\datatype.h
+	"compatible.h"
+
+1405623521 source:c:\myapps\codeblock\btcutil\base\util.c
+	"util.h"
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\evp.h
+	<openssl/opensslconf.h>
+	<openssl/opensslconf.h>
+	<openssl/ossl_typ.h>
+	<openssl/symhacks.h>
+	<openssl/bio.h>
+	<openssl/objects.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\opensslconf.h
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\ossl_typ.h
+	<openssl/e_os2.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\e_os2.h
+	<openssl/opensslconf.h>
+	<sys/socket.h>
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\symhacks.h
+	<openssl/e_os2.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\bio.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdarg.h>
+	<openssl/crypto.h>
+	<stdint.h>
+	<inttypes.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\crypto.h
+	<stdlib.h>
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/opensslv.h>
+	<openssl/ossl_typ.h>
+	<openssl/ebcdic.h>
+	<openssl/symhacks.h>
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\stack.h
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\safestack.h
+	<openssl/stack.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\opensslv.h
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\ebcdic.h
+	<sys/types.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\objects.h
+	<openssl/obj_mac.h>
+	<openssl/bio.h>
+	<openssl/asn1.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\obj_mac.h
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\asn1.h
+	<time.h>
+	<openssl/e_os2.h>
+	<openssl/bio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/symhacks.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\bn.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/ossl_typ.h>
+	<openssl/crypto.h>
+	<assert.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\conf.h
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/e_os2.h>
+	<openssl/ossl_typ.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\lhash.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/bio.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\err.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<errno.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\ecdsa.h
+	<openssl/opensslconf.h>
+	<openssl/ec.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1402131931 c:\myapps\codeblock\btcutil\inc\openssl\ec.h
+	<openssl/opensslconf.h>
+	<openssl/asn1.h>
+	<openssl/symhacks.h>
+	<openssl/bn.h>
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\sha.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\ripemd.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1402131932 c:\myapps\codeblock\btcutil\inc\openssl\rand.h
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/e_os2.h>
+	<windows.h>
+
