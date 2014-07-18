@@ -1,0 +1,230 @@
+# depslib dependency file v1.0
+1405589782 source:d:\myapps\codeblocks\btcaddrgen\base\datatype.c
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1405234581 d:\myapps\codeblocks\btcaddrgen\base\compatible.h
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+	<time.h>
+	<sys/time.h>
+	<assert.h>
+	<pthread.h>
+	<io.h>
+	<ws2tcpip.h>
+	<winsock2.h>
+	<mswsock.h>
+	<windows.h>
+	<commctrl.h>
+	<stdbool.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netinet/ip.h>
+	<netinet/ip6.h>
+	<iconv.h>
+
+1405364966 d:\myapps\codeblocks\btcaddrgen\base\util.h
+	"compatible.h"
+	<openssl/evp.h>
+	<openssl/conf.h>
+	<openssl/err.h>
+	<time.h>
+	<openssl/bn.h>
+	<openssl/ecdsa.h>
+	<openssl/sha.h>
+	<openssl/ripemd.h>
+	<openssl/rand.h>
+	<openssl/obj_mac.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\evp.h
+	<openssl/opensslconf.h>
+	<openssl/opensslconf.h>
+	<openssl/ossl_typ.h>
+	<openssl/symhacks.h>
+	<openssl/bio.h>
+	<openssl/objects.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\opensslconf.h
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\ossl_typ.h
+	<openssl/e_os2.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\e_os2.h
+	<openssl/opensslconf.h>
+	<sys/socket.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\symhacks.h
+	<openssl/e_os2.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\bio.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdarg.h>
+	<openssl/crypto.h>
+	<stdint.h>
+	<inttypes.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\crypto.h
+	<stdlib.h>
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/opensslv.h>
+	<openssl/ossl_typ.h>
+	<openssl/ebcdic.h>
+	<openssl/symhacks.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\stack.h
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\safestack.h
+	<openssl/stack.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\opensslv.h
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\ebcdic.h
+	<sys/types.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\objects.h
+	<openssl/obj_mac.h>
+	<openssl/bio.h>
+	<openssl/asn1.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\obj_mac.h
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\asn1.h
+	<time.h>
+	<openssl/e_os2.h>
+	<openssl/bio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/symhacks.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\bn.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/ossl_typ.h>
+	<openssl/crypto.h>
+	<assert.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\conf.h
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/e_os2.h>
+	<openssl/ossl_typ.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\lhash.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/bio.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\err.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<errno.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\ecdsa.h
+	<openssl/opensslconf.h>
+	<openssl/ec.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\ec.h
+	<openssl/opensslconf.h>
+	<openssl/asn1.h>
+	<openssl/symhacks.h>
+	<openssl/bn.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\sha.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\ripemd.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1401963866 d:\myapps\codeblocks\bitcoin-c\inc\openssl\rand.h
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/e_os2.h>
+	<windows.h>
+
+1404820533 d:\myapps\codeblocks\btcaddrgen\base\datatype.h
+	"compatible.h"
+
+1405365057 source:d:\myapps\codeblocks\btcaddrgen\base\hwinobj.c
+	"hWinObj.h"
+	<winuser.h>
+
+1405185607 d:\myapps\codeblocks\btcaddrgen\base\hwinobj.h
+	"compatible.h"
+	"util.h"
+	<commctrl.h>
+
+1405619829 source:d:\myapps\codeblocks\btcaddrgen\base\util.c
+	"util.h"
+
+1404507659 source:d:\myapps\codeblocks\btcaddrgen\btcaddrgen.rc
+	"resource.h"
+
+1404507659 d:\myapps\codeblocks\btcaddrgen\resource.h
+
+1405589782 source:d:\myapps\codeblocks\btcaddrgen\leftpanel.c
+	"resource.h"
+	"base/compatible.h"
+	"base/datatype.h"
+	"LeftPanel.h"
+
+1404582439 d:\myapps\codeblocks\btcaddrgen\leftpanel.h
+	"base/hWinObj.h"
+
+1405621607 source:d:\myapps\codeblocks\btcaddrgen\main.c
+	"resource.h"
+	"base/compatible.h"
+	"base/datatype.h"
+	"base/hWinObj.h"
+	"base/util.h"
+	"MainFrame.h"
+
+1405633215 d:\myapps\codeblocks\btcaddrgen\mainframe.h
+	"base/hWinObj.h"
+	"MainWindow.h"
+	"LeftPanel.h"
+	"TopPanel.h"
+
+1405356264 d:\myapps\codeblocks\btcaddrgen\mainwindow.h
+	"base/hWinObj.h"
+
+1404628326 d:\myapps\codeblocks\btcaddrgen\toppanel.h
+	"base/compatible.h"
+	"base/datatype.h"
+	"base/hWinObj.h"
+
+1405633277 source:d:\myapps\codeblocks\btcaddrgen\mainframe.c
+	"base/compatible.h"
+	"base/util.h"
+	"resource.h"
+	"MainFrame.h"
+
+1405632057 source:d:\myapps\codeblocks\btcaddrgen\mainwindow.c
+	"MainWindow.h"
+
+1405633264 source:d:\myapps\codeblocks\btcaddrgen\toppanel.c
+	"resource.h"
+	"TopPanel.h"
+	"MainFrame.h"
+	<pthread.h>
+
