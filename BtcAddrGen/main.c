@@ -73,6 +73,9 @@ BOOL InitInstance(HINSTANCE hInstance)
 
     if(!InitChWinObjClasses(hInstance)) return FALSE;
 
+    // WinXP might failed to display statusbar if not call InitCommonControls
+    InitCommonControls();
+
     ChWinObj_GetDefaultWndClass(&w);
     w.lpszMenuName = MAKEINTRESOURCE(IDR_MAINFRAME);
     w.lpszClassName = TEXT("ch_MainFrame");
