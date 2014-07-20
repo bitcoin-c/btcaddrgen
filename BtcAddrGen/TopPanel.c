@@ -34,15 +34,16 @@ typedef enum _TOPPANEL_ID
 
 extern CMainFrame * cf;
 
-static HANDLE hMutex;
-static CRITICAL_SECTION cs;
+
 static LONG nAddrCount = 0;
 static LONG nKeysGen;
 
-static volatile BOOL fGenerate = FALSE;
+BOOL fGenerate = FALSE;
 
 #define MAX_THREADS 16
 static pthread_t hGenThreads[MAX_THREADS];
+static pthread_mutex_t hMutex;
+
 static int nThreads;
 static uint64_t nStartTime; // seconds
 
@@ -96,8 +97,8 @@ static BOOL TopPanel_OnCreate(CTopPanel * pWnd, LPCREATESTRUCT pcs)
     HWND hButton;
     HWND hWnd;
 
-    InitializeCriticalSection(&cs);
-    hMutex = CreateMutex(NULL, FALSE, NULL);
+
+    pthread_mutex_init(&hMutex, NULL);
 
 
     hWnd = CreateWindowEx(0, TEXT("STATIC"), TEXT("keys count"),
@@ -192,17 +193,17 @@ static BOOL TopPanel_OnCreate(CTopPanel * pWnd, LPCREATESTRUCT pcs)
 }
 static BOOL TopPanel_Destroy(CTopPanel * pWnd)
 {
-    int i;
-    DeleteCriticalSection(&cs);
+    fGenerate = FALSE;
+    sleep(1);
+
     if(NULL != hMutex)
     {
-        CloseHandle(hMutex);
-        hMutex = NULL;
+        pthread_mutex_destroy(&hMutex);
     }
-    for(i = 0; i < nThreads; i++)
-    {
-        pthread_join(hGenThreads[i], NULL);
-    }
+//    for(i = 0; i < nThreads; i++)
+//    {
+//        pthread_join(hGenThreads[i], NULL);
+//    }
     return TRUE;
 }
 
@@ -314,9 +315,9 @@ void TopPanel_OnButtonClicked(CTopPanel * pWnd, UINT uID)
     }else if(uID == IDC_GENERATE_STOP)
     {
 
-        EnterCriticalSection(&cs);
+        pthread_mutex_lock(&hMutex);
         fGenerate = FALSE;
-        LeaveCriticalSection(&cs);
+        pthread_mutex_unlock(&hMutex);
 
 
         EnableWindow(GetDlgItem(hWnd, IDC_GENERATE_STOP), FALSE);
@@ -385,11 +386,11 @@ void * GenerateKeysAndAddresses_thread(void * pvParam)
     pkey = ECKey_new();
     p_end = szText + sizeof(szText);
     if(NULL == pkey) goto label_exit;
-    do
+    while(fGenerate)
     {
-        EnterCriticalSection(&cs);
+        pthread_mutex_lock(&hMutex);
         fRun = fGenerate;
-        LeaveCriticalSection(&cs);
+        pthread_mutex_unlock(&hMutex);
         if(!fRun) goto label_exit;
 
         cb = ECKey_GeneratePrivKey(pkey, vch);
@@ -419,13 +420,11 @@ void * GenerateKeysAndAddresses_thread(void * pvParam)
         i = InterlockedIncrement(&nKeysGen);
 
 
-    //    if((i % 100) == 0)
+        if((i % 100) == 0)
         {
             uint64_t nCurTime;
             nCurTime = GetTime();
             nCurTime -= nStartTime;
-            dwWait = WaitForSingleObject(hMutex, INFINITE);
-
 
 
             sprintf(sz, "generated %d keys", i);
@@ -433,7 +432,7 @@ void * GenerateKeysAndAddresses_thread(void * pvParam)
             sprintf(sz, "%.2u:%.2u:%.2u",
                 (uint32_t)(nCurTime/3600)%24, (uint32_t)(nCurTime/60)%60, (uint32_t)(nCurTime%60) );
             SendMessage(hStatusBar, SB_SETTEXT, 3, (LPARAM)sz);
-            ReleaseMutex(hMutex);
+
         }
 
         if(param->cbPrefix)
@@ -447,8 +446,7 @@ void * GenerateKeysAndAddresses_thread(void * pvParam)
 
 
 
-        dwWait = WaitForSingleObject(hMutex, INFINITE);
-        if(dwWait == WAIT_FAILED) break;
+        pthread_mutex_lock(&hMutex);
         nAddrCount++;
         nValidCount = nAddrCount;
 
@@ -476,17 +474,19 @@ void * GenerateKeysAndAddresses_thread(void * pvParam)
 //        SendMessage(hOutput, EM_REPLACESEL, 0, (LPARAM)szText);
 
         cf->Log(cf, szText);
-        ReleaseMutex(hMutex);
-        Sleep(20);
-        continue;
+
+        pthread_mutex_unlock(&hMutex);
+
+        if(nValidCount >= param->nCount) break;
 
 
-    }while(nValidCount < param->nCount);
+    };
 
 
 
 label_exit:
     ECKey_Free(pkey);
+    printf("thread exit.\n");
 //    if(NULL != szText) free(szText);
 //    if(NULL != sz) free(sz);
 //    if(NULL != szWif) free(szWif);
@@ -563,6 +563,15 @@ BOOL GenerateKeysAndAddresses(CTopPanel * pWnd, int nCount, LPCTSTR lpszPrefix, 
     nAddrCount = 0;
     nKeysGen = 0;
 
+    SendMessage(hStatusBar, SB_SETTEXT, 0, (LPARAM)"Generating:");
+    if(param->cbPrefix)
+    {
+        sprintf(sz, "1%s", Param.szPrefix);
+        SendMessage(hStatusBar, SB_SETTEXT, 1, (LPARAM)sz);
+    }
+
+    cf->Log(cf, NULL);
+
     for(i = 0; i < nThreads; i++)
     {
         param = CHUTIL_AllocMemory(struct _GKAA_PARAM, 1);
@@ -573,18 +582,11 @@ BOOL GenerateKeysAndAddresses(CTopPanel * pWnd, int nCount, LPCTSTR lpszPrefix, 
         if(rc != 0)
         {
             ErrorMsgBox(CHWND(pWnd), GetLastError(), TEXT("GenerateKeysAndAddresses Error"), 0);
-            return FALSE;
+            goto label_errexit;
         }
     }
 
-    SendMessage(hStatusBar, SB_SETTEXT, 0, (LPARAM)"Generating:");
-    if(param->cbPrefix)
-    {
-        sprintf(sz, "1%s", Param.szPrefix);
-        SendMessage(hStatusBar, SB_SETTEXT, 1, (LPARAM)sz);
-    }
 
-    cf->Log(cf, NULL);
 
 
 

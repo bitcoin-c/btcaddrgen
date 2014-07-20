@@ -177,6 +177,7 @@ static BOOL MainFrame_OnCreate(CMainFrame * pWnd, LPCREATESTRUCT pcs)
 static BOOL MainFrame_Destroy(CMainFrame * pWnd)
 {
     KillTimer(CHWND(pWnd), 1);
+    ChWinObj_free((ChWinObj *)pWnd->p_TopPanel);
     ChWinObj_free((ChWinObj *)pWnd->p_LeftPanel);
     ChWinObj_free((ChWinObj *)pWnd->p_MainWindow);
     return TRUE;

@@ -228,3 +228,232 @@
 	"MainFrame.h"
 	<pthread.h>
 
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\datatype.c
+	"compatible.h"
+	"util.h"
+	"datatype.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\compatible.h
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+	<time.h>
+	<sys/time.h>
+	<assert.h>
+	<pthread.h>
+	<io.h>
+	<ws2tcpip.h>
+	<winsock2.h>
+	<mswsock.h>
+	<windows.h>
+	<commctrl.h>
+	<stdbool.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<unistd.h>
+	<netinet/ip.h>
+	<netinet/ip6.h>
+	<iconv.h>
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\util.h
+	"compatible.h"
+	<openssl/evp.h>
+	<openssl/conf.h>
+	<openssl/err.h>
+	<time.h>
+	<openssl/bn.h>
+	<openssl/ecdsa.h>
+	<openssl/sha.h>
+	<openssl/ripemd.h>
+	<openssl/rand.h>
+	<openssl/obj_mac.h>
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\datatype.h
+	"compatible.h"
+
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\hwinobj.c
+	"hWinObj.h"
+	<winuser.h>
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\hwinobj.h
+	"compatible.h"
+	"util.h"
+	<commctrl.h>
+
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\base\util.c
+	"util.h"
+
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\btcaddrgen.rc
+	"resource.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\resource.h
+
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\leftpanel.c
+	"resource.h"
+	"base/compatible.h"
+	"base/datatype.h"
+	"LeftPanel.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\leftpanel.h
+	"base/hWinObj.h"
+
+1405699356 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\mainwindow.c
+	"MainWindow.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\mainwindow.h
+	"base/hWinObj.h"
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\evp.h
+	<openssl/opensslconf.h>
+	<openssl/opensslconf.h>
+	<openssl/ossl_typ.h>
+	<openssl/symhacks.h>
+	<openssl/bio.h>
+	<openssl/objects.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\opensslconf.h
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\ossl_typ.h
+	<openssl/e_os2.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\e_os2.h
+	<openssl/opensslconf.h>
+	<sys/socket.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\symhacks.h
+	<openssl/e_os2.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\bio.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdarg.h>
+	<openssl/crypto.h>
+	<stdint.h>
+	<inttypes.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\crypto.h
+	<stdlib.h>
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/opensslv.h>
+	<openssl/ossl_typ.h>
+	<openssl/ebcdic.h>
+	<openssl/symhacks.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\stack.h
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\safestack.h
+	<openssl/stack.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\opensslv.h
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\ebcdic.h
+	<sys/types.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\objects.h
+	<openssl/obj_mac.h>
+	<openssl/bio.h>
+	<openssl/asn1.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\obj_mac.h
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\asn1.h
+	<time.h>
+	<openssl/e_os2.h>
+	<openssl/bio.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/symhacks.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\bn.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/ossl_typ.h>
+	<openssl/crypto.h>
+	<assert.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\conf.h
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<openssl/stack.h>
+	<openssl/safestack.h>
+	<openssl/e_os2.h>
+	<openssl/ossl_typ.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\lhash.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<openssl/bio.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\err.h
+	<openssl/e_os2.h>
+	<stdio.h>
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/bio.h>
+	<openssl/lhash.h>
+	<errno.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\ecdsa.h
+	<openssl/opensslconf.h>
+	<openssl/ec.h>
+	<openssl/ossl_typ.h>
+	<openssl/bn.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\ec.h
+	<openssl/opensslconf.h>
+	<openssl/asn1.h>
+	<openssl/symhacks.h>
+	<openssl/bn.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\sha.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\ripemd.h
+	<openssl/e_os2.h>
+	<stddef.h>
+
+1401963866 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\inc\openssl\rand.h
+	<stdlib.h>
+	<openssl/ossl_typ.h>
+	<openssl/e_os2.h>
+	<windows.h>
+
+1405770585 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\main.c
+	"resource.h"
+	"base/compatible.h"
+	"base/datatype.h"
+	"base/hWinObj.h"
+	"base/util.h"
+	"MainFrame.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\mainframe.h
+	"base/hWinObj.h"
+	"MainWindow.h"
+	"LeftPanel.h"
+	"TopPanel.h"
+
+1405699356 d:\github\bitcoin-c\btcaddrgen\btcaddrgen\toppanel.h
+	"base/compatible.h"
+	"base/datatype.h"
+	"base/hWinObj.h"
+
+1405870649 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\mainframe.c
+	"base/compatible.h"
+	"base/util.h"
+	"resource.h"
+	"MainFrame.h"
+
+1405870845 source:d:\github\bitcoin-c\btcaddrgen\btcaddrgen\toppanel.c
+	"resource.h"
+	"TopPanel.h"
+	"MainFrame.h"
+	<pthread.h>
+
